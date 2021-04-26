@@ -2,7 +2,9 @@
   <h1>Jobs details</h1>
 
     <div v-for="job in jobs" :key="job.id" class="jobsDetails">
-        <h3>{{job.name}}: </h3>  <h2>{{job.salary}}</h2>
+        <router-link :to="{name: 'JobDetails', params: {id:job.id}}" class="routerLink">
+        <h3>{{job.name}}</h3>  <h2>Salary: {{job.salary}}</h2>
+        </router-link>
     </div>
 </template>
 
@@ -33,4 +35,9 @@ export default {
         background-color: chocolate;
         cursor: pointer;
     }
+    .routerLink{
+        color: black;
+        text-decoration: none;
+    }
+    
 </style>

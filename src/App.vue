@@ -4,7 +4,7 @@
   <div class="border"></div>
   <router-link :to="{name: 'About'}" class="routerLink">About</router-link> 
   <div class="border"></div>
-  <router-link to="/jobs/66" class="routerLink">Jobs</router-link><br>
+  <router-link to="/jobs" class="routerLink">Jobs</router-link><br>
 
   <router-view></router-view>
 
@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .router-link-active{
     padding: 10px;
     background-color: chocolate;
