@@ -1,10 +1,10 @@
 <template>
-  <h1>Job with id: {{$route.params.id}}</h1>
+  <h1>Job with id: {{id}}</h1>
 </template>
 
 <script>
 export default {
-
+    props:['id']
 }
 </script>
 
