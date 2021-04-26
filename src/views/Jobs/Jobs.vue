@@ -12,12 +12,15 @@
 export default {
     data(){
         return{
-            jobs:[
-                {id: 1, name: 'Java junior developer', salary: 10000},
-                {id: 2, name: 'Vue.js frontend developer', salary: 5000},
-                {id: 3, name: 'Physical worker', salary: 1000}
-            ]
+            jobs:[]
         }
+    },
+
+    mounted(){
+        fetch('http://localhost:8081/getJobs')
+        .then(res => res.json())
+        .then(data => this.jobs = data)
+        .catch(err => console.log(err.message))
     }
 }
 </script>
